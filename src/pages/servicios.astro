@@ -76,10 +76,18 @@ import Layout from "../layouts/Layout.astro";
                         <div class="card-content">
                             <p class="title is-5">Encuadernado y anillado</p>
                             <p>
-                                ¿Trabajos grandes? Nosotros podemos ordenarlos y
-                                engargolarlos, dandole una mejor presentacion a
-                                sus trabajos.
+                                Empastado profesional para tesis, trabajos o
+                                manuales.
                             </p>
+
+                            <div class="has-text-centered mt-4">
+                                <button
+                                    class="button is-link is-small"
+                                    onclick="abrirModalEncuadernado()"
+                                >
+                                    Ver más detalles
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,10 +105,18 @@ import Layout from "../layouts/Layout.astro";
                         <div class="card-content">
                             <p class="title is-5">Papelería de oficina</p>
                             <p>
-                                Artículos esenciales: folders, calculadoras,
-                                hojas, plumas y copias. Tambien documentos como
-                                solicitudes de empleo, parares, etc
+                                Solicitudes de empleo y pagarés disponibles para
+                                negocio o trámites.
                             </p>
+
+                            <div class="has-text-centered mt-4">
+                                <button
+                                    class="button is-link is-small"
+                                    onclick="abrirModalOficina()"
+                                >
+                                    Ver más detalles
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,10 +155,18 @@ import Layout from "../layouts/Layout.astro";
                         <div class="card-content">
                             <p class="title is-5">Plastificado de documentos</p>
                             <p>
-                                Protección profesional para documentos
-                                importantes. Protectores de hojas, hasta
-                                enmicados a caolor.
+                                Protección duradera para tus papeles
+                                importantes.
                             </p>
+
+                            <div class="has-text-centered mt-4">
+                                <button
+                                    class="button is-link is-small"
+                                    onclick="abrirModalPlastificado()"
+                                >
+                                    Ver más detalles
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,8 +185,8 @@ import Layout from "../layouts/Layout.astro";
                             <p class="title is-5">Regalos</p>
                             <p>
                                 ¿Buscar decorar un regalo? Nosotros podemos
-                                envolver o enbolsar regalos a gusto de cada
-                                cliente
+                                envolver o embolsar regalos a gusto de cada
+                                cliente. El precio depende del tamaño del mismo.
                             </p>
                         </div>
                     </div>
@@ -185,6 +209,7 @@ import Layout from "../layouts/Layout.astro";
                                 familia, con nosotros podras encontrar una
                                 variedad de juguete para los mas pequeños del
                                 hogar.
+                                Puede preguntar via WhatsApp la disponibilidad de algunos.
                             </p>
                         </div>
                     </div>
@@ -201,12 +226,19 @@ import Layout from "../layouts/Layout.astro";
                             </figure>
                         </div>
                         <div class="card-content">
-                            <p class="title is-5">Venta de joyeria</p>
+                            <p class="title is-5">Venta de Joyeria</p>
                             <p>
-                                Si buscas un detalle, contamos con una variedad
-                                de pulseras y collares de oro laminado,
-                                especiales para una persona especial.
+                                Si buscas un detalle especial para una persona especial, prueba dandole una pulsera o collar de oro laminado.
                             </p>
+
+                            <div class="has-text-centered mt-4">
+                                <button
+                                    class="button is-link is-small"
+                                    onclick="abrirModalJoyeria()"
+                                >
+                                    Ver más detalles
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -272,17 +304,226 @@ import Layout from "../layouts/Layout.astro";
                     onclick="cerrarModalUtiles()"></button>
             </header>
             <section class="modal-card-body">
-                <ul>
-                    <li><strong>📝 Cuaderno profesional:</strong> $25.00</li>
-                    <li><strong>✏️ Lápiz del #2:</strong> $3.00</li>
-                    <li><strong>🖍 Colores (12 piezas):</strong> $20.00</li>
-                    <li><strong>📐 Juego de geometría:</strong> $18.00</li>
-                    <li><strong>🎒 Mochila escolar:</strong> desde $180.00</li>
-                </ul>
+                <div class="media mb-4">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="/cuaderno.jpg" alt="Cuaderno" />
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <p><strong>Cuaderno profesional:</strong> $25.00</p>
+                    </div>
+                </div>
+
+                <div class="media mb-4">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="/lapiz.jpeg" alt="Lápiz" />
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <p><strong>Lápiz del #2:</strong> $3.00</p>
+                    </div>
+                </div>
+
+                <div class="media mb-4">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="/colores.jpeg" alt="Colores" />
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <p><strong>Colores (12 piezas):</strong> $20.00</p>
+                    </div>
+                </div>
+
+                <div class="media mb-4">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img
+                                src="/geometria.webp"
+                                alt="Juego de geometría"
+                            />
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <p><strong>Juego de geometría:</strong> $18.00</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="/gomas.webp" alt="Mochila" />
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <p><strong>Gomas para borrar:</strong> desde $10.00</p>
+                    </div>
+                </div>
             </section>
+
             <footer class="modal-card-foot">
                 <button class="button is-primary" onclick="cerrarModalUtiles()"
                     >Cerrar</button
+                >
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Encuadernado -->
+    <div id="modal-encuadernado" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Encuadernado y Anillado</p>
+                <button
+                    class="delete"
+                    aria-label="close"
+                    onclick="cerrarModalEncuadernado()"></button>
+            </header>
+            <section class="modal-card-body has-text-centered">
+                <figure class="image is-128x128 is-inline-block mb-4">
+                    <img
+                        src="/engargolado.webp"
+                        alt="Engargolado"
+                        style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                    />
+                </figure>
+                <p><strong>Engargolado tamaño carta:</strong> $20.00</p>
+                <p><strong>Engargolado tamaño oficio:</strong> $25.00</p>
+                <p class="mt-3">
+                    Incluye pasta transparente y cartulina negra.
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button
+                    class="button is-primary"
+                    onclick="cerrarModalEncuadernado()">Cerrar</button
+                >
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Papelería de Oficina -->
+    <div id="modal-oficina" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Papelería de Oficina</p>
+                <button
+                    class="delete"
+                    aria-label="close"
+                    onclick="cerrarModalOficina()"></button>
+            </header>
+            <section class="modal-card-body has-text-centered">
+                <div class="mb-5">
+                    <figure class="image is-128x128 is-inline-block">
+                        <img
+                            src="/solicitud.jpg"
+                            alt="Solicitud de empleo"
+                            style="border-radius: 6px;"
+                        />
+                    </figure>
+                    <p class="mt-2">
+                        <strong>Solicitud de empleo:</strong> $3.00
+                    </p>
+                </div>
+
+                <div>
+                    <figure class="image is-128x128 is-inline-block">
+                        <img
+                            src="/pagare.jpg"
+                            alt="Pagaré legal"
+                            style="border-radius: 6px;"
+                        />
+                    </figure>
+                    <p class="mt-2"><strong>Pagaré:</strong> $2.50</p>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-primary" onclick="cerrarModalOficina()"
+                    >Cerrar</button
+                >
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Plastificado -->
+    <div id="modal-plastificado" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Plastificado (Enmicado)</p>
+                <button
+                    class="delete"
+                    aria-label="close"
+                    onclick="cerrarModalPlastificado()"></button>
+            </header>
+            <section class="modal-card-body has-text-centered">
+                <figure class="image is-128x128 is-inline-block mb-4">
+                    <img
+                        src="/enmicado.jpg"
+                        alt="Enmicado"
+                        style="border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"
+                    />
+                </figure>
+                <p><strong>Enmicado tamaño carta:</strong> $8.00</p>
+                <p><strong>Enmicado tamaño credencial:</strong> $4.00</p>
+                <p class="mt-3">
+                    Ideal para proteger constancias, credenciales o documentos
+                    importantes.
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button
+                    class="button is-primary"
+                    onclick="cerrarModalPlastificado()">Cerrar</button
+                >
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Joyeria -->
+    <div id="modal-joyeria" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Joyeria</p>
+                <button
+                    class="delete"
+                    aria-label="close"
+                    onclick="cerrarModalJoyeria()"></button>
+            </header>
+            <section class="modal-card-body has-text-centered">
+                <div class="mb-5">
+                    <figure class="image is-128x128 is-inline-block">
+                        <img
+                            src="/pulsera.jpg"
+                            alt="Pulsera de oro laminado"
+                            style="border-radius: 6px;"
+                        />
+                    </figure>
+                    <p class="mt-2">
+                        <strong>Pulsera de oro laminado:</strong> $80.00
+                    </p>
+                </div>
+
+                <div>
+                    <figure class="image is-128x128 is-inline-block">
+                        <img
+                            src="/collar.webp"
+                            alt="Collar de oro laminado"
+                            style="border-radius: 6px;"
+                        />
+                    </figure>
+                    <p class="mt-2"><strong>Collar de oro laminado:</strong> $85.00</p>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button
+                    class="button is-primary"
+                    onclick="cerrarModalJoyeria()">Cerrar</button
                 >
             </footer>
         </div>
@@ -297,9 +538,45 @@ import Layout from "../layouts/Layout.astro";
         document.getElementById("modal-copias").classList.remove("is-active");
     }
     function abrirModalUtiles() {
-    document.getElementById("modal-utiles").classList.add("is-active");
-  }
-  function cerrarModalUtiles() {
-    document.getElementById("modal-utiles").classList.remove("is-active");
-  }
+        document.getElementById("modal-utiles").classList.add("is-active");
+    }
+    function cerrarModalUtiles() {
+        document.getElementById("modal-utiles").classList.remove("is-active");
+    }
+    function abrirModalEncuadernado() {
+        document
+            .getElementById("modal-encuadernado")
+            .classList.add("is-active");
+    }
+    function cerrarModalEncuadernado() {
+        document
+            .getElementById("modal-encuadernado")
+            .classList.remove("is-active");
+    }
+    function abrirModalOficina() {
+        document.getElementById("modal-oficina").classList.add("is-active");
+    }
+    function cerrarModalOficina() {
+        document.getElementById("modal-oficina").classList.remove("is-active");
+    }
+    function abrirModalPlastificado() {
+        document
+            .getElementById("modal-plastificado")
+            .classList.add("is-active");
+    }
+    function cerrarModalPlastificado() {
+        document
+            .getElementById("modal-plastificado")
+            .classList.remove("is-active");
+    }
+    function abrirModalJoyeria() {
+        document
+            .getElementById("modal-joyeria")
+            .classList.add("is-active");
+    }
+    function cerrarModalJoyeria() {
+        document
+            .getElementById("modal-joyeria")
+            .classList.remove("is-active");
+    }
 </script>
